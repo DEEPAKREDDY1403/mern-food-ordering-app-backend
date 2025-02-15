@@ -22,7 +22,7 @@ type CheckoutSessionRequest ={
     restaurantId: string;
 };
 
-const stripeWebhookHandler = async (req: Request, res: Response) : Promise<void>=> {
+const stripeWebhookHandler = async (req: Request, res: Response) : Promise<void>  => {
     let event;
   
     try {
