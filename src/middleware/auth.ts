@@ -12,17 +12,17 @@ declare global {
   }
 }
 
- export const jwtCheck  = auth({
-    audience: 'mern-food-ordering-app-api',
+export const jwtCheck = auth({
+  audience: 'mern-food-ordering-app-api',
     issuerBaseURL: 'https://dev-mrr4iu0sv0rz07ig.us.auth0.com/',
     tokenSigningAlg: 'RS256'
-  });
+});
 
-  export const jwtParse = async (
+export const jwtParse = async (
   req: Request,
   res: Response,
   next: NextFunction
-) : Promise<void> => {
+) : Promise<void>  => {
   const { authorization } = req.headers;
 
   if (!authorization || !authorization.startsWith("Bearer ")) {
